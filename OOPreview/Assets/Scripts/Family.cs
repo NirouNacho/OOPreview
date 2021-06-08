@@ -29,6 +29,18 @@ public class Family : MonoBehaviour
         mother.isFather = false;
         mother.isMarried = true;
 
+        // assing spuose
+        father.spouse = mother;
+        mother.spouse = father;
+
+        if (father.IsmarriedTo(mother))
+        {
+            print(father.name + " is married to " + mother.name);
+        }
+        else {
+            print(father.name + " is not married to " + mother.name);
+        }
+
         son = new Person();
         son.name = "Nicolas";
         son.lastName = father.lastName;
@@ -38,8 +50,8 @@ public class Family : MonoBehaviour
         son.isMarried = false;
 
 
-        print(father.name + "and" + mother.name + "have a son called :"
-            + son.name + "who's" + son.age + " years old."
+        print(father.name + " and " + mother.name + " have a son called : "
+            + son.name + " who's " + son.age + " years old."
             );
 
     }

@@ -10,6 +10,19 @@ public class Person
     public int age = 0;
     public string address = "";
     public bool isMarried = false;
+    public bool isFather = true;
     public Car car;
+    public Person spouse;
+
+    //methods
+    public bool IsmarriedTo(Person spouse) {
+        
+        if (spouse == null)
+        {
+            return false;
+        }
+        Debug.Log(spouse.name);
+        return this.spouse == spouse ;
+    }
 
 }
